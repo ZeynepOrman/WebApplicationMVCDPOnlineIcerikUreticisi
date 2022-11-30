@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WebApplicationMVCDPOnlineIcerikUreticisi.Models.Onlineİcerik>
+
+@{
+    ViewBag.Title = "";
+}
+
+
+
+<p>
+    <br/>
+    @Html.ActionLink("Create New", "EkleYenile", null, new { @class = "btn btn-warning" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.İcerikAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.İcerikTuru)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.İcerikAdi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.İcerikTuru)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EkleYenile", new { id = item.İcerikNo }, new { @class = "btn btn-warning" }) |
+
+                @Html.ActionLink("Delete", "Delete", new { id = item.İcerikNo }, new { @class = "btn btn-warning" })
+            </td>
+        </tr>
+    }
+
+</table>

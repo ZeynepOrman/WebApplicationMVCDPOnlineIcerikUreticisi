@@ -1,0 +1,40 @@
+﻿@model IEnumerable<WebApplicationMVCDPOnlineIcerikUreticisi.Models.MusteriOnlineİcerik>
+
+@{
+    ViewBag.Title = "";
+}
+
+
+
+<p>
+    <br />
+    @Html.ActionLink("Create New", "EkleYenile", null, new { @class = "btn btn-warning" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MAdSoyad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MEmail)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.MAdSoyad)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MEmail)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "EkleYenile", new { id = item.MusteriNo }, new { @class = "btn btn-warning" }) |
+
+        @Html.ActionLink("Delete", "Delete", new { id = item.MusteriNo }, new { @class = "btn btn-warning" })
+    </td>
+</tr>
+}
+
+</table>
