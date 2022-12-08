@@ -4,8 +4,6 @@
     ViewBag.Title = "";
 }
 
-
-
 <p>
     <br />
     @Html.ActionLink("Create New", "EkleYenile", null, new { @class = "btn btn-warning" })
@@ -21,20 +19,42 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.MAdSoyad)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.MEmail)
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "EkleYenile", new { id = item.MusteriNo }, new { @class = "btn btn-warning" }) |
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MAdSoyad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MEmail)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EkleYenile", new { id = item.MusteriNo }, new { @class = "btn btn-warning" }) |
 
-        @Html.ActionLink("Delete", "Delete", new { id = item.MusteriNo }, new { @class = "btn btn-warning" })
-    </td>
-</tr>
-}
+                @Html.ActionLink("Delete", "Delete", new { id = item.MusteriNo }, new { @class = "btn btn-warning" })
+            </td>
+        </tr>
+    }
 
 </table>
+@*@section scripts{
+    <script>
+        $(function () {
+            var successMessage = '@TempData["SuccessMessage"]';
+
+            if (successMessage != '')
+                alertify.success(successMessage);
+
+        });
+        function Sil(id) {
+            alertify.confirm('silme işlemi', 'Kayıtı silmek ister misiniz?', function () {
+                window.location.href = '@Url.Action("Sil", "M")/' + id;
+            }, null);
+
+
+        }
+
+
+
+    </script>
+    }*@

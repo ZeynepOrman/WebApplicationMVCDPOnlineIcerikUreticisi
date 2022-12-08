@@ -63,48 +63,49 @@
             </div>
             <!-- Logo -->
             <div class="amado-btn-group mt-30 mb-100">
-                <a href="@Url.Action("Index", "Admin")" class="btn amado-btn mb-15">Anasayfa</a>
+                <a href="@Url.Action("Index", "Admin")" class="btn amado-btn mb-15">Admin Sayfası</a>
             </div>
+
+
+            <!-- Amado Nav -->
             <nav class="amado-nav">
-            <ul>
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"
-                       aria-expanded="true" aria-controls="collapseOne">
-                        <i class="fas fa-fw fa-cog"></i>
-                        <span>İçerikler</span>
-                    </a>
-                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <a class="collapse-item" href="#">Komedi</a>
-                            <a class="collapse-item" href="#">Aksiyon</a>
-                            <a class="collapse-item" href="#">Dram</a>
-                            <a class="collapse-item" href="#">Fantastik</a>
-                            <a class="collapse-item" href="#">Bilim Kurgu</a>
+                <ul>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                           aria-expanded="true" aria-controls="collapseTwo">
+                            <i class="fas fa-fw fa-cog"></i>
+                            <span>Admin</span>
+                        </a>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <a class="collapse-item" href="@Url.Action("Index", "O")">İçerikleri Düzenle</a>
+                                <a class="collapse-item" href="@Url.Action("Index", "M")">Müşterileri Düzenle</a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-
-
+                    </li>
+                </ul>
+            </nav>
             <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                <!-- Amado Nav -->
+
                 <nav class="amado-nav">
                     <ul>
                         <li class="nav-item">
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                               aria-expanded="true" aria-controls="collapseTwo">
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"
+                               aria-expanded="true" aria-controls="collapseOne">
                                 <i class="fas fa-fw fa-cog"></i>
-                                <span>Admin</span>
+                                <span>İçerikler</span>
                             </a>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                                 <div class="bg-white py-2 collapse-inner rounded">
-                                    <a class="collapse-item" href="@Url.Action("Index", "O")">İçerikleri Düzenle</a>
-                                    <a class="collapse-item" href="@Url.Action("Index", "M")">Müşterileri Düzenle</a>
+                                    <a class="collapse-item" href="#">Komedi</a>
+                                    <a class="collapse-item" href="#">Aksiyon</a>
+                                    <a class="collapse-item" href="#">Dram</a>
+                                    <a class="collapse-item" href="#">Fantastik</a>
+                                    <a class="collapse-item" href="#">Bilim Kurgu</a>
                                 </div>
                             </div>
                         </li>
@@ -128,7 +129,7 @@
                     <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                     <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 </div>
-        </header>
+</header>
         <!-- Header Area End -->
         <!-- Product Catagories Area Start -->
         <div class="products-catagories-area clearfix">
@@ -262,7 +263,7 @@
                 <!-- Newsletter Text -->
                 <div class="col-12 col-lg-6 col-xl-7">
                     <div class="newsletter-text mb-100">
-                        <h2> %25 indirimli <span> üye ol </span></h2>
+                        <h2> Nulla ac <span> convallis lorem </span></h2>
                         <p>Nulla ac convallis lorem, eget euismod nisl. Donec in libero sit amet mi vulputate consectetur. Donec auctor interdum purus, ac finibus massa bibendum nec.</p>
                     </div>
                 </div>
@@ -271,8 +272,15 @@
                     <div class="newsletter-form mb-100">
                         <form action="#" method="post">
                             <input type="email" name="email" class="nl-email" placeholder="E-mail Adresi">
-                            <input type="submit" value="Üye ol">
+
+                            <input type="email" name="email" class="nl-email" placeholder="Şifre">
+
                         </form>
+
+                        <form action="#" method="post">
+                            <input type="submit" value="Giriş yap">
+                        </form>
+
                     </div>
                 </div>
             </div>
@@ -309,7 +317,7 @@
                                 <div class="collapse navbar-collapse" id="footerNavContent">
                                     <ul class="navbar-nav ml-auto">
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="@Url.Action("Index", "Admin")">Anasayfa</a>
+                                            @*<a class="nav-link" href="@Url.Action("Index", "Admin")">Anasayfa</a>*@
                                         </li>
 
 
@@ -322,6 +330,7 @@
                 </div>
             </div>
         </div>
+
     </footer>
     <!-- ##### Footer Area End ##### -->
     <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->

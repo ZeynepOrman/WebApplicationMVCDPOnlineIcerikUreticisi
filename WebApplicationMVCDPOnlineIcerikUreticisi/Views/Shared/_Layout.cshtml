@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@*//ASIL*@
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -9,6 +11,7 @@
     <script src="~/Scripts/modernizr-2.8.3.js"></script>
 </head>
 <body>
+
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -17,10 +20,37 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Anasayfa", "Index", "Admin", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Admin Anasayfa", "Index", "Admin", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("İçerik", "Index", "O", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Müşteri", "Index", "M", new { area = "" }, new { @class = "navbar-brand" })
+                @*<div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="@Url.Action("Index", "O")">İçerik</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="@Url.Action("Index", "M")">Müşteri</a></li>
+
+                </ul>
+            </div>*@
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav pull-right">
+                    @{
+                        try
+                        {
+                            if (User.Identity.Name != null)
+                            {
+                                <li>Welcome, @Html.ActionLink(User.Identity.Name, "Index", "Admin")</li>
+                                <li>@Html.ActionLink("Logout", "Logout", "Accounts")</li>
+                            }
+
+
+                        }
+
+                        catch
+
+                        {
+
+                        }
+                    }
                 </ul>
             </div>
         </div>
@@ -36,5 +66,6 @@
 
     <script src="~/Scripts/jquery-3.4.1.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+
 </body>
 </html>

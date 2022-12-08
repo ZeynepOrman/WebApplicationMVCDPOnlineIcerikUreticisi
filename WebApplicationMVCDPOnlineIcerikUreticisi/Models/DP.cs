@@ -10,7 +10,7 @@ namespace WebApplicationMVCDPOnlineIcerikUreticisi.Models
 {
     public class DP
     {
-        private static string connectionString = @"Server=316-04\SQLEXPRESS; Database=OnlineİcerikUreticisi; uid=sa; pwd=I$kur2022#!;";
+        public static string connectionString = @"Server=LAPTOP-1NP5U72T; Database= OnlineİcerikUreticisi; Integrated Security = true;";
 
         public static void ExecuteWReturn(string procadi, DynamicParameters param = null)
         {
