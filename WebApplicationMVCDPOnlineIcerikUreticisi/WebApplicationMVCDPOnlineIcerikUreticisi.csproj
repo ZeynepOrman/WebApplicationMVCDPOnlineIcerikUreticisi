@@ -116,6 +116,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="ScreenShots\AdminAnasayfasi.png" />
+    <Content Include="ScreenShots\LoginSayfasi.png" />
+    <Content Include="ScreenShots\MusteriDuzenleSayfasi.png" />
+    <Content Include="ScreenShots\İçerikDuzenleSayfasi.png" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
