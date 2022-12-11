@@ -38,7 +38,7 @@
                         {
                             if (User.Identity.Name != null)
                             {
-                                <li>Welcome, @Html.ActionLink(User.Identity.Name, "Index", "Admin")</li>
+                                @*<li>Welcome, @Html.ActionLink(User.Identity.Name, "Index", "Admin")</li>*@
                                 <li>@Html.ActionLink("Logout", "Logout", "Accounts")</li>
                             }
 
